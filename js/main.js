@@ -3,10 +3,11 @@ let nav_links = document.querySelector(".nav-links");
 bars.addEventListener("click", function () {
   //   alert("hello");
   nav_links.classList.toggle("show");
-  console.log(this.src);
-  if (this.src === "http://127.0.0.1:5500/day8/blog/img/bar.svg") {
-    this.src = "http://127.0.0.1:5500/day8/blog/img/cross.svg";
+  // console.log(this.src);
+  let url = window.location.origin;
+  if (this.src === `${url}/img/bar.svg`) {
+    this.src = `${url}/img/cross.svg`;
   } else {
-    this.src = "http://127.0.0.1:5500/day8/blog/img/bar.svg";
+    this.src = `${url}/img/bar.svg`;
   }
 });
